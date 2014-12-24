@@ -320,7 +320,7 @@ function! tbone#write_command(bang, line1, line2, count, target) abort
         \ getline(a:line1, a:line2),
         \ 'substitute(v:val,"^\\s*","","")'),
         \ "!empty(v:val)"),
-        \ "\r")
+        \ "\r")."\r"
   if a:count > 0
     let keys = get(g:, 'tbone_write_initialization', '').keys."\r"
   endif
